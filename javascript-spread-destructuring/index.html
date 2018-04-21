@@ -1,0 +1,59 @@
+<html lang="en">
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Assignment 3</title>
+    </head>
+    <body> 
+
+            <script>
+/* Write a Javascript code that implements below:
+    • Combine below arrays into single array in order as primes, evens and odds
+    • Copy below array into another array
+    • Destructuring below object into variables names same the property names
+    • Destructure below array into variables player1,player2,player3 and player4 respectively
+*/           
+             console.log("Combine below arrays into single array in order as primes, evens and odds");
+             console.log("-------------------------------------------------------------------------");
+             var evens = [2,4,6,8];
+             console.log("evens: "+`${evens}`);
+             var odds = [1,3,5,7];
+             console.log("odds: "+`${odds}`);
+             var primes = [2,3,5,7,11];
+             console.log("primes: "+`${primes}`);
+             var combined_array = [...primes,...evens,...odds]; //Combine using spread operator
+             console.log("Combined array: "+`${combined_array}`);
+             
+             console.log("Copy below array into another array");
+             console.log("-----------------------------------");
+             var numbers1 = [1,2,3];
+             console.log("Array: "+`${numbers1}`);
+             var numbers2 = [...numbers1]; //Copy the array using spread operator
+             console.log("Copied Array: "+`${numbers2}`); 
+
+             console.log("Destructuring below object into variables names same the property names");
+             console.log("-----------------------------------------------------------------------"); 
+             var jamesBond = {
+                 first:'James',
+                 last:'Bond',
+                 country: 'United States',
+                 city: 'New york',
+                 twitter: '@jamesbond'
+                };
+             var {first,last,country,city,twitter} = jamesBond; //Object destructuring
+             console.log("first: "+`${first}`+", "+"last: "+`${last}`+", "+"country: "+`${country}`+", "
+                         +"city: "+`${city}`+", "+"twitter: "+`${twitter}`);
+
+             console.log("Destructure below array into variables player1,player2,player3 and player4");
+             console.log("--------------------------------------------------------------------------");
+             var players = ['paul','andy','darrell','jim'];
+             console.log("Players: "+`${players}`);
+             var [player1,player2,player3,player4] = players; //Array destructuring
+             console.log("player1: "+`${player1}`+", "+"player2: "+`${player2}`+", "+"player3: "
+                         +`${player3}`+", "+"player4: "+`${player4}`);
+
+            </script>
+    </body>
+</html>
